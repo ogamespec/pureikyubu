@@ -3309,7 +3309,7 @@ namespace Gekko
 		if (core->regs.msr & MSR_FP)
 		{
 			size_t i = info.paramBits[4];
-			uint32_t EA = core->regs.gpr[info.paramBits[2]], data0, data1;
+			uint32_t EA = core->regs.gpr[info.paramBits[2]], data0 = 0, data1 = 0;
 			int32_t d = (int32_t)info.paramBits[0];
 			uint8_t scale = (uint8_t)LD_SCALE(i);
 			GEKKO_QUANT_TYPE type = LD_TYPE(i);
@@ -3411,7 +3411,7 @@ namespace Gekko
 		if (core->regs.msr & MSR_FP)
 		{
 			size_t i = info.paramBits[4];
-			uint32_t EA = core->regs.gpr[info.paramBits[2]], data0, data1;
+			uint32_t EA = core->regs.gpr[info.paramBits[2]], data0 = 0, data1 = 0;
 			int32_t d = (int32_t)info.paramBits[0];
 			uint8_t scale = (uint8_t)LD_SCALE(i);
 			GEKKO_QUANT_TYPE type = LD_TYPE(i);
@@ -3513,7 +3513,7 @@ namespace Gekko
 
 		if (core->regs.msr & MSR_FP)
 		{
-			uint32_t EA = info.Imm.Signed & 0xfff, data0, data1;
+			uint32_t EA = info.Imm.Signed & 0xfff, data0 = 0, data1 = 0;
 			int32_t d = (int32_t)info.paramBits[0];
 			uint8_t scale = (uint8_t)LD_SCALE(info.paramBits[3]);
 			GEKKO_QUANT_TYPE type = LD_TYPE(info.paramBits[3]);
@@ -3568,7 +3568,7 @@ namespace Gekko
 
 		if (core->regs.msr & MSR_FP)
 		{
-			uint32_t EA = info.Imm.Signed & 0xfff, data0, data1;
+			uint32_t EA = info.Imm.Signed & 0xfff, data0 = 0, data1 = 0;
 			int32_t d = (int32_t)info.paramBits[0];
 			uint8_t scale = (uint8_t)LD_SCALE(info.paramBits[3]);
 			GEKKO_QUANT_TYPE type = LD_TYPE(info.paramBits[3]);
